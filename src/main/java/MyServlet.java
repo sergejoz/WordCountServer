@@ -1,4 +1,4 @@
-import javax.servlet.ServletException;
+﻿import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,7 +23,7 @@ public class MyServlet extends HttpServlet {
                 ResultMap.forEach((k,v) -> {
                     try {
                         // при использовании прямых путей выдавало ошибку недопустимых символов в URL, поэтому добавил URLEncode
-                        out.println("<a href=find?path=" + URLEncoder.encode(k, "UTF-8") + ">" + k + ": " + v + " раз(а)" + "</a><br>");
+                        out.println("<a href=find?path=" + URLEncoder.encode(k, "UTF-8") + ">" + k + ": " + v + "</a><br>");
                     } catch (UnsupportedEncodingException e) {
                         e.printStackTrace();
                     }
